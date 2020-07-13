@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  items: any = { name: 'dosa', quantity: 0 };
+  items: any = { name: 'dosa', quantity: 1 };
 
   constructor(private router: Router ){}
 
@@ -16,6 +16,6 @@ export class HomeComponent {
     console.log("In Home component : " + this.items.quantity);
     //this.router.navigate(['/orders/', {data: this.items.quantity}]);
     //this.router.navigateByUrl('/orders/quantity='+ this.items.quantity);
-    this.router.navigateByUrl('/orders/'+this.items.quantity);
+    this.router.navigateByUrl('/orders/'+this.items.quantity+'/'+this.items.name);
   }
 }
