@@ -8,7 +8,7 @@ import { PaymentComponent } from './payment/payment.component';
 const routes : Routes = [
     { path:'', redirectTo:'home', pathMatch:"prefix"},
     {path:'home', component: HomeComponent},
-    {path:'orders/:data', component: OrderComponent},
+    {path:'orders/:quantity', component: OrderComponent},
     {path:'payment', component: PaymentComponent},
 ]
 

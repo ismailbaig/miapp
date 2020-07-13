@@ -1,0 +1,3 @@
+ng build --prod --base-href ./ --output-path mimobile/www/
+
+cordova build android

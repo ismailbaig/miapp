@@ -13,7 +13,9 @@ export class HomeComponent {
   constructor(private router: Router ){}
 
   buy(){
-    console.log(this.items.quantity);
-    this.router.navigate(['/orders', {data: this.items.quantity}]);
+    console.log("In Home component : " + this.items.quantity);
+    //this.router.navigate(['/orders/', {data: this.items.quantity}]);
+    //this.router.navigateByUrl('/orders/quantity='+ this.items.quantity);
+    this.router.navigateByUrl('/orders/'+this.items.quantity);
   }
 }
