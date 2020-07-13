@@ -11,13 +11,16 @@ export interface order {
 })
 export class OrderComponent implements OnInit{
 
-    _quantity: order;
+    _quantity: string;
+    _itemName: string;
+    
     constructor(private router:Router, private route: ActivatedRoute){}
 
     ngOnInit(): void {
-        // _data = this.route.snapshot.paramMap.get('data');
-        this._quantity = <order>this.route.snapshot.params;
-        console.log("In Order component : " + this._quantity.quantity);
+        this._quantity = this.route.snapshot.paramMap.get('quantity');
+        this._itemName = this.route.snapshot.paramMap.get('itemname');
+        //this._quantity = this.route.snapshot.params;
+        console.log("In Order component : " + this._quantity);
     }
 
 
