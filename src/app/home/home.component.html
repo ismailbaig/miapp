@@ -1,51 +1,38 @@
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-2 text-center foodImgHeigth">
-            <img src="../assets/dosa1.jpg" 
-            class="rounded foodImgHeigth"
-            alt="Kurnool  Dosa">
+
+    <div *ngFor="let item of items">
+        <div class="row">
+            <div class="col-lg-2 text-center foodImgHeigth">
+                <img [src]="item.foodImg" 
+                class="rounded foodImgHeigth"
+                alt="item.name">
+            </div>
+            <div class="col-lg-4 foodImgHeigth">
+                <div>{{item.description}}</div>
+            </div>
+            <div class="col-lg-2 foodImgHeigth">
+                <div>Rs {{item.price}}/- each</div>
+            </div>
+            <div class="col-lg-2 foodImgHeigth">
+                <input type="number" name="item.name"
+                 placeholder="Qauntity"
+                 min="1" max="5" [(ngModel)]="item.quantity"></div> 
         </div>
-        <div class="col-lg-4 foodImgHeigth">
-            <div>A special Dosa with Tasty Chutney</div>
-        </div>
-        <div class="col-lg-2 foodImgHeigth">
-            <div>Rs 25/- each</div>
-        </div>
-        <div class="col-lg-2 foodImgHeigth">
-            <input type="number" id="dosaQuantity"
-             name="dosaQuantity" placeholder="Enter Dosa Qunatity"
-             min="1" max="5" [(ngModel)]="items.quantity"></div> 
-        
-        <div class="col-lg-2 foodImgHeigth">
-            <button type="button" class="btn btn-link"
-            (click)="buy()"
-            >Buy</button>
+        <hr />
+    </div>
+   
+    <div class='row'>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+            <div class="text-left">
+                <button type="button" class="btn btn-success"
+                (click)="buy()"
+                >Buy</button>
         </div>
     </div>
-    <hr />
-    
-    <div class="row">
-        <div class="col-lg-2 text-center foodImgHeigth">
-            <img src="../assets/idli.jpg" 
-            class="rounded foodImgHeigth"
-            alt="Kurnool  Idli">
-        </div>
-        <div class="col-lg-4 foodImgHeigth">
-            <div>A special Idli with Tasty Sambar and Chutney</div>
-        </div>
-        <div class="col-lg-2 foodImgHeigth">
-            <div>Rs 20/- each</div>
-        </div>
-        <div class="col-lg-2 foodImgHeigth">
-            <input type="number" id="idliQuantity"
-             name="idliQuantity" placeholder="Enter Idli Qunatity"
-             min="1" max="5"></div> 
-        <div class="col-lg-2 foodImgHeigth">
-            <button type="button" class="btn btn-link"
-            (click)="buy()"
-            >Buy</button>
-        </div>
     </div>
-    <hr />
+
 </div>
