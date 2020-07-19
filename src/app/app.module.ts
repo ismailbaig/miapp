@@ -7,6 +7,9 @@ import { OrderComponent } from './order/order.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AppService } from './appServices/app.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { PaymentComponent } from './payment/payment.component';
   imports: [
     BrowserModule, 
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

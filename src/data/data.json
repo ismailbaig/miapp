@@ -1,0 +1,29 @@
+[{
+    "name":"dosa",
+      "foodImg": "./assets/dosa1.jpg",
+      "description":"A very special Dosa with Tasty Chutney!!",
+      "price": 25, 
+      "quantity": 1
+    }, 
+    {
+    "name":"idli",
+      "foodImg": "./assets/idli.jpg",
+      "description":"A very tasty Idli with Chutney & Sambar!!",
+      "price": 20, 
+      "quantity": 2
+    },
+    {
+    "name":"vada",
+      "foodImg": "./assets/vada.jpg",
+      "description":"Delicious Vada with Chutney & Sambar!!",
+      "price": 10, 
+      "quantity": 3
+    },
+
+    {
+    "name":"puri",
+      "foodImg": "./assets/puri.jpg",
+      "description":"Delicious puri with Chutney !!",
+      "price": 15, 
+      "quantity": 2
+}]

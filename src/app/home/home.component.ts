@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from '../appServices/app.service';
+import * as data from "../../data/data.json";
 
 
 @Component({
@@ -7,40 +9,15 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  items: any = [
-    {
-      name: 'dosa',
-      foodImg: '../assets/dosa1.jpg',
-      description:'A special Dosa with Tasty Chutney!!',
-      price: 25, 
-      quantity: 1
-    }, 
-    {
-      name: 'idli',
-      foodImg: '../assets/idli.jpg',
-      description:'A very tasty Idli with Chutney & Sambar!!',
-      price: 20, 
-      quantity: 2
-    },
-    {
-      name: 'vada',
-      foodImg: '../assets/vada.jpg',
-      description:'Delicious Vada with Chutney & Sambar!!',
-      price: 10, 
-      quantity: 3
-    },
+export class HomeComponent implements OnInit {
+  items: any = [];
 
-    {
-      name: 'puri',
-      foodImg: '../assets/puri.jpg',
-      description:'Delicious puri with Chutney !!',
-      price: 15, 
-      quantity: 2
-    },
-  ]
+  constructor(private router: Router, private appSrv: AppService ){}
 
-  constructor(private router: Router ){}
+  ngOnInit(): void {
+    console.log(data.default);
+    this.items = data.default  //this.appSrv.getFoodDashboard();
+  }
 
   buy(){
     console.log("In Home component : " + this.items.quantity);
