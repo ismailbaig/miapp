@@ -7,7 +7,7 @@ ng build --prod --base-href ./ --output-path mimobile/www/
 
 cordova create miKnlFood com.mi.miKnlFood miKnlFood
 cordova platform add android
-cordova build android
+cordova build android --debug
 cordova build android --release
 ---------------------------------------------------------------------------------------------------------
 
