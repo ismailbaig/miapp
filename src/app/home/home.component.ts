@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppService } from '../appServices/app.service';
 import * as data from "../../data/data.json";
-import {HomeModel} from '../../model/home.model';
+import {HomeModel} from '../models/home.model'
 
 
 @Component({
@@ -16,8 +16,10 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private appSrv: AppService ){}
 
   ngOnInit(): void {
-    console.log(data.default);
-    this.items = data.default  //this.appSrv.getFoodDashboard();
+    // console.log(data.default);
+    // this.items = data.default  
+    //this.appSrv.getFoodDashboard().subscribe(res => this.items = res);
+    this.items = this.appSrv.getFoodDashboard();
   }
 
   buy(){

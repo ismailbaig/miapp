@@ -2,6 +2,6 @@ export class HomeModel {
     name: string;
     foodImg: string;
     description: string;
-    price: Number;
-    quantity: string;
+    price: number;
+    quantity: number
 }
