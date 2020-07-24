@@ -1,5 +1,8 @@
-<div class="text-center">
-    <b>{{_quantity}} {{_itemName}} ordered!!</b></div>
+<div class="container">
+    <div *ngFor="let item of _items">
+        {{item.quantity}} {{item.name}}('s') ordered !! - Total cost of Dosa('s') {{item.quantity * item.price}}
+    </div>
+</div>
+<div>Total Cost: Rs {{}}</div>
     
-    
-    <div class='text-center'>  <button (click)="next()">next</button>  </div>
+<div class='text-center'>  <button (click)="next()">next</button>  </div>

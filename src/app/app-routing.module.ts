@@ -8,7 +8,8 @@ import { PaymentComponent } from './payment/payment.component';
 const routes : Routes = [
     { path:'', redirectTo:'home', pathMatch:"prefix"},
     {path:'home', component: HomeComponent},
-    {path:'orders/:quantity/:itemname/:idliqnty/:idliname', component: OrderComponent},
+    // {path:'orders/:quantity/:itemname/:idliqnty/:idliname', component: OrderComponent},
+    {path: 'order', component: OrderComponent},
     {path:'payment', component: PaymentComponent},
 ]
 

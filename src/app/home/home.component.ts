@@ -29,5 +29,11 @@ export class HomeComponent implements OnInit {
     
     // this.router.navigateByUrl('/orders/'+this.items[0].quantity+'/'+this.items.name
     // +'/'+this.items[1].quantity+'/'+this.items[1].name);
+
+    this.appSrv.addFoodOrder(this.items);
+    
+    this.router.navigateByUrl('/order');
+
+
   }
 }
