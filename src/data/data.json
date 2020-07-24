@@ -26,4 +26,12 @@
       "description":"Delicious puri with Chutney !!",
       "price": 15, 
       "quantity": 2
-}]
+},
+{
+  "name":"puri",
+    "foodImg": "./assets/puri.jpg",
+    "description":"Delicious puri with Chutney !!",
+    "price": 15, 
+    "quantity": 2
+}
+]
