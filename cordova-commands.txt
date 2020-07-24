@@ -5,9 +5,10 @@ cordova apk will be blank, make it ./ in index.html of www folder in cordova pro
 
 ng build --prod --base-href ./ --output-path mimobile/www/
 
-cordova create miKnlFood com.example.miKnlFood miKnlFood
+cordova create miKnlFood com.mi.miKnlFood miKnlFood
 cordova platform add android
-cordova build android
+cordova build android --debug
+cordova build android --release
 ---------------------------------------------------------------------------------------------------------
 
 pushd C:\Users\dell\Documents\My Documents\miKurnool\miapp\mimobile
@@ -22,6 +23,17 @@ C:\Users\dell\Documents\My Documents\miKurnool\miapp\mimobile\platforms\android\
 
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+
+Sign an APK
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <keystorename> <Unsigned APK file> <Keystore Alias name>
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore miKnlApp.keystore app-release-unsigned.apk miKnlApp
+
+Zip Align your apk before uploading
+D:\projects\Phonegap\Example\platforms\android\ant-build> zipalign -v 4 app-release-unsigned.apk MiFood.apk
+
+
 C:\Users\dell\Documents\My Documents\miKurnool\miapp\mimobile>keytool -genkey -v -keystore miKnlApp.keystore -alias miKnlApp -keyalg RSA -keysize 2048 -validity 10000
 Enter keystore password:
 Re-enter new password:

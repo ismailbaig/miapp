@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppService } from '../appServices/app.service';
 import * as data from "../../data/data.json";
-import { HomeModel } from '../models/home.model';
+import {HomeModel} from '../models/home.model'
+
 
 @Component({
   selector: 'app-home',
