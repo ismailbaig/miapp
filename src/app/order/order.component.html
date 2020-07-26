@@ -1,15 +1,16 @@
 <div class="container">
     <div *ngFor="let item of _items">
-        <div class="row">
+        <div *ngIf='IsItemOrdered(item.quantity)' class="row">
             <div class="col-lg-6 text-center">
               {{item.quantity}} {{item.name}}('s') ordered !!
             </div>
             <div class="col-lg-6 text-center">
                 Total cost of Dosa('s') {{item.quantity * item.price}}
             </div>
+            <hr />
         </div>
-        <hr />
     </div>
+    <hr />
     <div class="row">
         <div class="col-lg-6"></div>
         <div class="col-lg-6 text-center">Total Cost: Rs {{_totalCost}}</div>

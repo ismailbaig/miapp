@@ -19,7 +19,8 @@ keytool -genkey -v -keystore helloworld.keystore -alias helloworld -keyalg RSA -
 keytool -genkey -v -keystore mi1.keystore -alias mi1 -keyalg RSA -keysize 2048 -validity 10000
 keytool -genkey -v -keystore test1.keystore -alias test1 -keyalg RSA -keysize 2048 -validity 10000
 
-C:\Users\dell\Documents\My Documents\miKurnool\miapp\mimobile\platforms\android\app\build\outputs\apk\debug
+C:\Users\dell\Documents\My Documents\miKurnool\miapp\miKnlFood\platforms\android\app\build\outputs\apk\debug
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------
