@@ -14,7 +14,7 @@ export interface order {
 export class OrderComponent implements OnInit{
 
     _items: HomeModel[];
-    _totalCost: Number = 0;
+    _totalCost: number = 0;
 
     constructor(private router:Router, private route: ActivatedRoute, private appsrv: AppService){}
 
@@ -26,13 +26,20 @@ export class OrderComponent implements OnInit{
 
         this._items = this.appsrv.getFoodDashboard();
 
-        this._items.forEach(x =>  (x.quantity * x.price))
+        for(let i of this._items){
+            this._totalCost += i.price * i.quantity;
+        }
+
+        //this._items.forEach(x => this._totalCost + (x.quantity * x.price));
     }
 
 
-    next(){
-
-        this.router.navigate(['./payment']);
+    ConfrimOrder(){
+        this.appsrv.sendEmail().subscribe(
+            res => res ? this.router.navigateByUrl('/payment') : this.router.navigateByUrl('/err'),
+            err => this.router.navigateByUrl('/err')
+        );
+        //this.router.navigate(['./payment']);
     }
 
 }

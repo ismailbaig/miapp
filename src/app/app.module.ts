@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AppService } from './appServices/app.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     OrderComponent,
     HomeComponent,
-    PaymentComponent
+    PaymentComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule, 

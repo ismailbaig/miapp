@@ -9,6 +9,7 @@ import {HomeModel} from '../models/home.model'
 export class AppService {
 
     private _jsonURL = '../../data/data.json';
+    private _miNodeURL = 'http://localhost:8081';
     data: HomeModel[] = [{
         "name":"dosa",
           "foodImg": "./assets/dosa1.jpg",
@@ -48,6 +49,10 @@ export class AppService {
     getFoodDashboard(): HomeModel[] {
         //this.http.get(this._jsonURL).subscribe( res => this.data = res);
         return this.data;
+    }
+
+    sendEmail(): Observable<string>{
+      return this.http.get(this._miNodeURL + '/sendOrderemail', {responseType: 'text'});
     }
 }
 

@@ -1,8 +1,22 @@
 <div class="container">
     <div *ngFor="let item of _items">
-        {{item.quantity}} {{item.name}}('s') ordered !! - Total cost of Dosa('s') {{item.quantity * item.price}}
+        <div class="row">
+            <div class="col-lg-6 text-center">
+              {{item.quantity}} {{item.name}}('s') ordered !!
+            </div>
+            <div class="col-lg-6 text-center">
+                Total cost of Dosa('s') {{item.quantity * item.price}}
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6 text-center">Total Cost: Rs {{_totalCost}}</div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6 text-center"><button class="btn btn-success" (click)="ConfrimOrder()">Confirm Order</button></div>
     </div>
 </div>
-<div>Total Cost: Rs {{}}</div>
-    
-<div class='text-center'>  <button (click)="next()">next</button>  </div>
